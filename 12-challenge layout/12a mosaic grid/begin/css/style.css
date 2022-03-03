@@ -118,4 +118,7 @@ figcaption {
     .span2-row {
         grid-row: span 2;
     }
+    figure {
+        height: 100%;
+    }
 }
