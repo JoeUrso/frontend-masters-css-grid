@@ -25,8 +25,8 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #DBE5DE;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #dbe5de;
 }
 
 img {
@@ -48,7 +48,6 @@ section ul {
     padding: 0;
     margin: 0;
 }
-
 
 /* figure and figure caption styling */
 
@@ -78,6 +77,33 @@ figcaption a:hover {
     color: var(--color8);
 }
 
-@media (min-width: 550px) {}
+/* Mobile */
+figure {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+}
 
-@media (min-width: 800px) {}
+img {
+    grid-column: 1/2;
+    grid-row: 1/4;
+}
+
+figcaption {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    opacity: 0.7;
+}
+
+/* Breakpoints */
+@media (min-width: 550px) {
+}
+
+@media (min-width: 800px) {
+    ul {
+        display: grid;
+        gap: 1%;
+        grid-template-rows: repeat(5, auto);
+        grid-template-columns: repeat(3, auto);
+    }
+}
