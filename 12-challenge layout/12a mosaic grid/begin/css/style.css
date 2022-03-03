@@ -106,4 +106,16 @@ figcaption {
         grid-template-rows: repeat(5, auto);
         grid-template-columns: repeat(3, auto);
     }
+    .span1-col {
+        grid-column: span 1;
+    }
+    .span2-col {
+        grid-column: span 2;
+    }
+    .span3-col {
+        grid-column: span 3;
+    }
+    .span2-row {
+        grid-row: span 2;
+    }
 }
