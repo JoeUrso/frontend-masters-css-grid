@@ -14,7 +14,6 @@ Clearly there is more you could place in variables, up to you if you want to use
     --color10: #9b2226;
 }
 
-
 /* generic site styles */
 
 html {
@@ -28,8 +27,8 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #DBE5DE;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #dbe5de;
     padding: 0;
     margin: 0;
 }
@@ -50,16 +49,13 @@ section ul {
     margin: 0;
 }
 
-
 /* header and nav styles */
-
 
 /* stretches completely across the page with the color */
 
 .header {
     background-color: var(--color5);
 }
-
 
 /* width limited and centered to line up with the rest of the page */
 
@@ -69,7 +65,6 @@ header {
     margin: 0 auto;
 }
 
-
 /* navigation styling - universal across breakpoints */
 
 nav ul {
@@ -77,7 +72,6 @@ nav ul {
     padding: 0;
     margin: 0;
 }
-
 
 /* I cover CSS-only hamburger buttons in my Advanced CSS Layouts course.
 
@@ -121,7 +115,6 @@ nav a:hover {
     color: var(--color5);
 }
 
-
 /* hero styles */
 
 #hero {
@@ -136,7 +129,6 @@ nav a:hover {
     max-width: 100%;
     max-height: 454px;
 }
-
 
 /* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
 
@@ -157,7 +149,6 @@ figure {
 #popart figure {
     border-color: var(--color8);
 }
-
 
 /* strange open space at the bottom of the box which shows through the transparent overlay - this kills it */
 
@@ -183,7 +174,6 @@ figcaption {
     padding: 0;
 }
 
-
 /* make the a have a big clickable area with display: block - the link occupies its containing element, the figcaption */
 
 figcaption a {
@@ -193,7 +183,6 @@ figcaption a {
     color: var(--color1);
 }
 
-
 /* green stripe for popular images */
 
 .stripe {
@@ -201,7 +190,6 @@ figcaption a {
     color: white;
     padding: 1rem 0 2rem 0;
 }
-
 
 /* featured image styles */
 
@@ -212,7 +200,6 @@ figcaption a {
 #featured img {
     object-position: 0;
 }
-
 
 /* style is doing double duty, styling border color and hover color. Only one declaration usually applies though.  */
 
@@ -252,7 +239,6 @@ figcaption a {
     color: var(--color8);
 }
 
-
 /* mission styles */
 
 #mission {
@@ -269,16 +255,44 @@ figcaption a {
     display: block;
 }
 
+/* Donut Love Section */
+.card-container {
+    display: flex;
+    flex-flow: column wrap;
+}
+.card-container div {
+    order: 1;
+}
+.donut1 {
+    order: 5;
+}
+.donut2 {
+    order: 6;
+}
+.donut3 {
+    order: 3;
+}
+.donut4 {
+    order: 4;
+}
+.donut5 {
+    order: 2;
+}
+#donut-love div img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+#donut-love a {
+    color: #005f73;
+}
 
 /* footer styles */
-
 
 /* color stretches to 100% of the page width */
 
 .footer {
     background-color: var(--color5);
 }
-
 
 /* width limited and centered to line up with the rest of the page */
 
@@ -289,7 +303,6 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 
 /* h4 top margin comes from the browser - it prevents the top of the .social element and the address from aligning */
 
@@ -305,7 +318,6 @@ footer ul {
     flex-flow: row wrap;
 }
 
-
 /* we want a constant distance between the buttons so they remain clickable at all times. flex-basis doesn't do that - sometimes the buttons are too close together. */
 
 footer li {
@@ -317,7 +329,6 @@ footer address {
     margin-top: 2rem;
     font-weight: bold;
 }
-
 
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
@@ -357,7 +368,12 @@ footer address {
     /* working with an image with a wide width so we have flexibility to set the shape-outside polygon points where we want. The edges of the image limit their placement. In Firefox, you can draw with shape-outside in browser tools */
     .missionimg {
         float: left;
-        shape-outside: polygon(35.84% 94.87%, 34.64% 87.05%, 51.64% 4.06%, 55.1% 2.38%);
+        shape-outside: polygon(
+            35.84% 94.87%,
+            34.64% 87.05%,
+            51.64% 4.06%,
+            55.1% 2.38%
+        );
         max-height: 211px;
     }
     /* remove the top margin assigned above that provided space between .social and address */
@@ -444,5 +460,52 @@ footer address {
     nav li:nth-child(4),
     nav li:nth-child(5) {
         order: 3;
+    }
+
+    /* Donut Love Section */
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 25% 32.5% 10% 32.5%;
+        gap: 1rem 1rem;
+    }
+    .donut1,
+    .donut2,
+    .donut3,
+    .donut4,
+    .donut5 {
+        order: 0;
+        height: 100%;
+    }
+    .donut1 {
+        grid-area: 2/2/3/3;
+    }
+    .donut2 {
+        grid-area: 3/2/5/3;
+    }
+    .donut3 {
+        grid-area: 1/1/4/2;
+    }
+    .donut4 {
+        grid-area: 4/1/5/2;
+    }
+    .donut5 {
+        grid-area: 1/2/2/3;
+    }
+    .card-container div {
+        grid-area: 1/2/2/3;
+        background-color: #dbe5de;
+        opacity: 0.7;
+    }
+    #donut-love div h3 {
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+    #donut-love div p {
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    #donut-love div img {
+        margin-bottom: 0;
     }
 }
