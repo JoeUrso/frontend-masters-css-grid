@@ -461,4 +461,51 @@ footer address {
     nav li:nth-child(5) {
         order: 3;
     }
+
+    /* Donut Love Section */
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 25% 32.5% 10% 32.5%;
+        gap: 1rem 1rem;
+    }
+    .donut1,
+    .donut2,
+    .donut3,
+    .donut4,
+    .donut5 {
+        order: 0;
+        height: 100%;
+    }
+    .donut1 {
+        grid-area: 2/2/3/3;
+    }
+    .donut2 {
+        grid-area: 3/2/5/3;
+    }
+    .donut3 {
+        grid-area: 1/1/4/2;
+    }
+    .donut4 {
+        grid-area: 4/1/5/2;
+    }
+    .donut5 {
+        grid-area: 1/2/2/3;
+    }
+    .card-container div {
+        grid-area: 1/2/2/3;
+        background-color: #dbe5de;
+        opacity: 0.7;
+    }
+    #donut-love div h3 {
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+    #donut-love div p {
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    #donut-love div img {
+        margin-bottom: 0;
+    }
 }
